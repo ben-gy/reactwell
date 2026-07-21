@@ -169,8 +169,11 @@ export function buildSrcDoc({ bundle, imports, reactUmd, reactDomUmd }: SrcDocIn
 <head>
 <meta charset="utf-8" />
 <style>
-  :root { color-scheme: light dark; }
-  html, body { margin: 0; }
+  /* Force a predictable light canvas so components with no colour of their own
+     stay legible — otherwise a dark OS theme paints default text white on the
+     white preview and it vanishes. */
+  :root { color-scheme: light; }
+  html, body { margin: 0; background: #ffffff; color: #111111; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 16px; line-height: 1.5; }
   #root:empty::after { content: 'Component mounted but rendered nothing.'; color: #888; font-style: italic; }
 </style>
