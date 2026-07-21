@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0e14" />
+    <meta name="description" content="Drop a JSX or TSX file and see the React component render instantly — transpiled in your browser with esbuild, nothing uploaded." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta property="og:title" content="Reactwell" />
+    <meta property="og:description" content="Drop a JSX or TSX file and see the React component render instantly — transpiled in your browser, nothing uploaded." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://reactwell.benrichardson.dev/" />
+    <meta property="og:image" content="https://reactwell.benrichardson.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Reactwell" />
+    <meta name="twitter:description" content="Drop a JSX or TSX file and see the React component render instantly — transpiled in your browser, nothing uploaded." />
+    <meta name="twitter:image" content="https://reactwell.benrichardson.dev/og.png" />
+
+    <!--
+      Security: the whole point of this tool is to run JSX you write, so the
+      preview iframe needs inline + blob: + data: module scripts. That surface is
+      confined to the sandboxed preview iframe; the app shell itself makes no
+      eval calls. 'wasm-unsafe-eval' is for the esbuild WebAssembly compiler.
+      esm.sh is only contacted when you opt in to fetching an extra library.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline' blob: data: https://esm.sh https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob: data: https://esm.sh https://cloudflareinsights.com https://feedback.benrichardson.dev; worker-src 'self' blob:; child-src 'self' blob: data:; frame-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'none';"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Reactwell — instant in-browser JSX / TSX preview</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Reactwell",
+        "description": "Drop a JSX or TSX file and see the React component render instantly — transpiled in your browser, nothing uploaded.",
+        "url": "https://reactwell.benrichardson.dev/",
+        "image": "https://reactwell.benrichardson.dev/og.png",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web browser",
+        "browserRequirements": "Requires JavaScript",
+        "author": { "@type": "Person", "name": "Ben Richardson", "url": "https://benrichardson.dev" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ba2bab2193ba42c1bea3d6714fcd0e28"}'></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
