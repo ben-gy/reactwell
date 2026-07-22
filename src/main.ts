@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 /**
  * Bootstraps Reactwell: builds the shell, wires the editor to the esbuild worker
  * and the preview iframe, and hooks up drop/open/share/drawer/modal controls.

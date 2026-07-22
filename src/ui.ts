@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 /**
  * App shell + chrome: header, two-pane workspace, drop zone, resizable splitter,
  * off-canvas event drawer, and the How-it-works / Privacy / About modals.
@@ -211,6 +214,6 @@ export function aboutHtml(): string {
       <li>Browse the rest → <a href="https://lab.benrichardson.dev" target="_blank" rel="noopener">lab.benrichardson.dev</a></li>
       <li>Source → <a href="https://github.com/ben-gy/reactwell" target="_blank" rel="noopener">github.com/ben-gy/reactwell</a></li>
     </ul>
-    <p class="muted">Built with Vite, esbuild-wasm, CodeMirror and React 18. No runtime backend. MIT licensed.</p>
+    <p class="muted">Built with Vite, esbuild-wasm, CodeMirror and React 18. No runtime backend.</p>
   `;
 }
